@@ -22,6 +22,10 @@ namespace WPFUI.Command
 
         public void Execute(object parameter)
         {
+            if (_action == null) 
+            {
+                throw new ArgumentNullException();
+            }
             _action();
         }
     }
